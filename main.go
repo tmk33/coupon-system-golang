@@ -30,7 +30,7 @@ func main() {
 
 	// Endpoint hiển thị tên Minh Kong
 	router.GET("/", func(c *gin.Context) {
-		c.String(http.StatusOK, "Hello Minh")
+		c.String(http.StatusOK, "Hello Minh dep trai")
 	})
 
 	router.GET("/customers", GetCustomers)
