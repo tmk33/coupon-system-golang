@@ -14,7 +14,7 @@ name: Auto Deploy Golang
              username: ${{ secrets.SSH_USERNAME }}
              key: ${{ secrets.SSH_KEY }}
              script: |
-               cd /home/forall/gin-server
+               cd /home/forall/gin-server/coupon-system-golang
                git pull origin main
                go build -o gin-server
-               sudo systemctl restart myapp.service
+               ./gin-server
