@@ -28,6 +28,11 @@ func main() {
 
 	router := gin.Default()
 
+	// Endpoint hiển thị tên Minh Kong
+	router.GET("/", func(c *gin.Context) {
+		c.String(http.StatusOK, "Minh Kong")
+	})
+
 	router.GET("/customers", GetCustomers)
 	router.GET("/customers/:id", GetCustomer)
 	router.POST("/customers", CreateCustomer)
