@@ -17,5 +17,4 @@ jobs:
             cd /home/forall/gin-server/coupon-system-golang
             git pull origin main
             go build -o gin-server
-            pkill -f gin-server
-            ./gin-server
+            sudo systemctl restart gin-server.service
